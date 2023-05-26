@@ -34,17 +34,13 @@ const modelValue = defineModel<string[]>()
 const newItem = ref('')
 
 const addNewItem = ()=>{
-  console.log('addNewItem')
   modelValue.value = [...modelValue.value, newItem.value]
   newItem.value = ''
-  console.log(modelValue.value)
 }
 
 
 const deleteItem = (index: number)=>{
-  console.log('deleteItem')
   modelValue.value = modelValue.value.filter((_, i)=>i!==index)
-  console.log(modelValue.value)
 }
 
 </script>
