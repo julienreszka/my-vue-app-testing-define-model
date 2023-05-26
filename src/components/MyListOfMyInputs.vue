@@ -31,7 +31,7 @@ const addAList = ()=>{
 }
 
 const deleteList = (index: number)=>{
-  modelValue.value = modelValue.value.filter((_, i)=>i!==index)
+  modelValue.value = modelValue.value?.filter((_, i)=>i!==index)
 }
 
 </script>
