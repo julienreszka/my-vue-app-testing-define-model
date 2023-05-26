@@ -5,6 +5,11 @@
   >
     <div>
       List {{ itemI  }}
+      <button
+        @click="deleteList(itemI)"
+      >
+        Delete list
+      </button>
     </div>
     <MyInputs v-model="modelValue[itemI]" />
   </div>
@@ -24,6 +29,12 @@ const modelValue = defineModel<string[][]>()
 const addAList = ()=>{
   console.log('addAList')
   modelValue.value = [...modelValue.value, []]
+  console.log(modelValue.value)
+}
+
+const deleteList = (index: number)=>{
+  console.log('deleteList')
+  modelValue.value = modelValue.value.filter((_, i)=>i!==index)
   console.log(modelValue.value)
 }
 
