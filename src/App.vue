@@ -1,19 +1,22 @@
 <script setup>
+import { ref } from "vue";
+import MyListOfMyInputs from "./components/MyListOfMyInputs.vue";
 
 
-
-import { ref } from 'vue'
-import MyListOfMyInputs from './components/MyListOfMyInputs.vue';
-
-const text = ref('')
-
-const listOfInputs = ref([[]])
+const listOfInputs = ref([[]]);
 </script>
 
 <template>
-  <MyListOfMyInputs v-model="listOfInputs" />
+  <div>
+    <pre>
+      listOfInputs: {{ 
+        listOfInputs
+        }}
+    </pre>
+  </div>
+  <div>
+    <MyListOfMyInputs v-model="listOfInputs" />
+  </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

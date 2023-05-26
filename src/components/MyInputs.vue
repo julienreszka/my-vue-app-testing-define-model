@@ -8,6 +8,11 @@
     <button @click="modelValue[itemI]=''">
       Clear
     </button>
+    <button
+      @click="deleteItem(itemI)"
+    >
+      Delete item
+    </button>
   </div>
   <MyInput v-model="newItem" 
     label="Add new item"
@@ -35,5 +40,11 @@ const addNewItem = ()=>{
   console.log(modelValue.value)
 }
 
+
+const deleteItem = (index: number)=>{
+  console.log('deleteItem')
+  modelValue.value = modelValue.value.filter((_, i)=>i!==index)
+  console.log(modelValue.value)
+}
 
 </script>
