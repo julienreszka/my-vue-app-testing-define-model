@@ -87,3 +87,15 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.d-flex {
+  display: flex;
+}
+
+.gap {
+  gap: 1em;
+}
+
+pre {
+  background: #f9f9f9;
+}
