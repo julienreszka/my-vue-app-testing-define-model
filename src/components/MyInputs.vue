@@ -5,6 +5,9 @@
     :key="itemI"
   >
     <MyInput v-model="modelValue[itemI]" />
+    <button @click="modelValue[itemI]=''">
+      Clear
+    </button>
   </div>
   <MyInput v-model="newItem" 
     label="Add new item"
