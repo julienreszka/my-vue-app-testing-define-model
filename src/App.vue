@@ -9,8 +9,8 @@ const listOfInputs = ref([[]]);
   <div class="d-flex gap">
     <div> 
       <pre>
-      listOfInputs: {{ listOfInputs }}
-    </pre
+        listOfInputs: {{ listOfInputs }}
+      </pre
       >
     </div>
     <div>

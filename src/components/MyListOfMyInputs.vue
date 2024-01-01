@@ -27,7 +27,10 @@ import MyInputs from './MyInputs.vue';
 
 const modelValue = defineModel<string[][]>()
 const addAList = ()=>{
-  modelValue.value = [...modelValue.value, []]
+  if (modelValue.value === undefined) {
+    modelValue.value = [];
+  }
+  modelValue.value = [...modelValue.value, []];
 }
 
 const deleteList = (index: number)=>{
